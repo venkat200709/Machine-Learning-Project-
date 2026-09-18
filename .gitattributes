@@ -1,0 +1,16 @@
+# Normalise line endings across Windows/Linux checkouts.
+* text=auto
+
+# Binary — never touch these.
+*.joblib  binary
+*.png     binary
+*.jpg     binary
+*.pdf     binary
+*.docx    binary
+*.pptx    binary
+*.xlsx    binary
+*.ipynb   -text
+
+# Keep shell/batch line endings correct for their platform.
+*.bat     text eol=crlf
+*.sh      text eol=lf

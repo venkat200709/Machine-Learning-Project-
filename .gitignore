@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ── Model artefacts ───────────────────────────────────────────────────
+# The DEPLOYED model and its metadata ARE committed (about 8 MB), so that
+# `git clone` + `python run.py` works immediately without a 10-minute
+# retrain. Training intermediates and the version registry are not: they are
+# 200 MB of regenerable build output, and one staged file alone is 93 MB,
+# which is close to GitHub's 100 MB hard limit.
+models/_staging/
+models/registry/
+
+# ── Generated reports ─────────────────────────────────────────────────
+# Also committed deliberately: the dashboard reads analytics.json and
+# geo_sample.json, and the report figures are referenced by the PBL document.
+
+# Runtime state — prediction history, audit log, drift snapshots
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
+# Secrets. `.env.example` is committed; `.env` never is.
+.env
+.env.local
+
+# ── Superseded code ───────────────────────────────────────────────────
+# Earlier versions of the frontend, kept locally for reference only. Nothing
+# in the running project imports them, so publishing them would just confuse
+# anyone reading the repository.
+legacy/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.ruff_cache/
+
+# Node (frontend smoke test only)
+node_modules/
+
+# pytest
+.pytest_cache/

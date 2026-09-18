@@ -1,0 +1,100 @@
+# ── RiskRadar production stack ────────────────────────────────────────
+#
+#   docker compose up                 app only, SQLite, zero setup
+#   docker compose --profile full up  + PostgreSQL, Prometheus, Grafana
+#
+# The default profile is deliberately the minimal one. A newcomer running
+# `docker compose up` should get a working dashboard, not four containers and
+# a Grafana login prompt. The full stack is opt-in via the profile flag.
+
+services:
+  riskradar:
+    build: .
+    image: riskradar:2.1.0
+    container_name: riskradar
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist trained artefacts, the registry and the database across rebuilds.
+      - ./models:/app/models
+      - ./reports:/app/reports
+      - riskradar-data:/app/data
+    environment:
+      PYTHONUNBUFFERED: "1"
+      RISKRADAR_ENV: ${RISKRADAR_ENV:-development}
+      RISKRADAR_JSON_LOGS: ${RISKRADAR_JSON_LOGS:-true}
+      RISKRADAR_METRICS_ENABLED: "true"
+      RISKRADAR_AUTH_ENABLED: ${RISKRADAR_AUTH_ENABLED:-false}
+      RISKRADAR_ADMIN_KEY: ${RISKRADAR_ADMIN_KEY:-}
+      RISKRADAR_JWT_SECRET: ${RISKRADAR_JWT_SECRET:-}
+      RISKRADAR_CORS_ORIGINS: ${RISKRADAR_CORS_ORIGINS:-*}
+      # Inside the container the app writes to a named volume, which is a real
+      # local filesystem — so SQLite locking works even when the host project
+      # folder is on OneDrive or a network share.
+      RISKRADAR_DATABASE_URL: ${RISKRADAR_DATABASE_URL:-sqlite:////app/data/riskradar.db}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 90s   # generous: a cold start may train a model first
+      retries: 3
+
+  # ── PostgreSQL ──────────────────────────────────────────────────────
+  # SQLite is single-writer. Fine for one replica, wrong for production
+  # traffic — the readiness audit flags it as a `high` finding on purpose.
+  postgres:
+    image: postgres:16-alpine
+    container_name: riskradar-db
+    profiles: ["full"]
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-riskradar}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+      POSTGRES_DB: ${POSTGRES_DB:-riskradar}
+    volumes:
+      - riskradar-pg:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-riskradar}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Prometheus ──────────────────────────────────────────────────────
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: riskradar-prometheus
+    profiles: ["full"]
+    volumes:
+      - ./deploy/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - riskradar-prom:/prometheus
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+    depends_on:
+      - riskradar
+
+  # ── Grafana ─────────────────────────────────────────────────────────
+  grafana:
+    image: grafana/grafana:latest
+    container_name: riskradar-grafana
+    profiles: ["full"]
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - ./deploy/grafana-datasource.yml:/etc/grafana/provisioning/datasources/prometheus.yml:ro
+      - riskradar-grafana:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+
+volumes:
+  riskradar-data:
+  riskradar-pg:
+  riskradar-prom:
+  riskradar-grafana:
