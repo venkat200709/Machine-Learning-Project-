@@ -1,0 +1,982 @@
+You are an expert academic poster designer, technical communication specialist,
+research visualizer, and engineering project presentation designer.
+
+I have uploaded my COMPLETE PBL / PROJECT REPORT.
+
+Your task is to thoroughly analyse the ENTIRE uploaded report and transform
+the project into a professional, concise, visually rich A3 LANDSCAPE academic
+project poster.
+
+The final poster must communicate the complete project clearly within a
+single A3 sheet without becoming text-heavy.
+
+=============================================================
+CRITICAL RULE 1 — USE THE COMPLETE PROJECT REPORT
+=============================================================
+
+Read and analyse the ENTIRE uploaded Project Report before designing the poster.
+
+Do not base the poster only on:
+• the abstract
+• introduction
+• first few pages
+• table of contents
+• conclusion
+
+Analyse all relevant sections, including:
+• problem statement
+• literature/background
+• objectives
+• proposed solution
+• methodology
+• algorithms
+• system architecture
+• implementation
+• technologies
+• hardware/software
+• datasets
+• experiments
+• results
+• graphs
+• tables
+• screenshots
+• observations
+• limitations
+• conclusion
+• future scope
+• references
+• project team information
+
+The Project Report is the PRIMARY SOURCE OF TRUTH.
+
+Do not invent:
+• project details
+• technical components
+• datasets
+• numerical values
+• accuracy
+• performance
+• results
+• student names
+• faculty names
+• references
+• technologies
+• claims
+
+If information is not available in the report, do not fabricate it.
+
+=============================================================
+CRITICAL RULE 2 — A3 LANDSCAPE ONLY
+=============================================================
+
+THE FINAL POSTER MUST BE A3 LANDSCAPE.
+
+This is mandatory.
+
+Physical size:
+420 mm × 297 mm
+
+Orientation:
+LANDSCAPE / HORIZONTAL
+
+Target resolution:
+4961 × 3508 pixels
+
+Resolution:
+300 DPI
+
+The WIDTH MUST BE GREATER THAN THE HEIGHT.
+
+DO NOT generate:
+• A3 portrait
+• vertical poster
+• 297 × 420 mm
+• 3508 × 4961 pixels
+• tall infographic
+• mobile-style layout
+
+The final design must look like a WIDE HORIZONTAL
+engineering college project exhibition poster.
+
+Think of the canvas as a large horizontal display board.
+
+All major sections must be arranged from LEFT → CENTER → RIGHT.
+
+=============================================================
+CRITICAL RULE 3 — DO NOT COPY LONG REPORT TEXT
+=============================================================
+
+Do NOT copy paragraphs directly from the report.
+
+Instead:
+
+1. Understand the complete meaning of the report.
+2. Identify the most important information.
+3. Rewrite each section in your own concise academic language.
+4. Remove repetition and unnecessary explanations.
+5. Convert long paragraphs into short bullets or compact statements.
+6. Preserve technical accuracy.
+7. Preserve important numerical results exactly.
+8. Make every section short enough to fit comfortably inside its poster panel.
+
+The poster should communicate the project quickly to a viewer
+standing approximately 1–2 metres away.
+
+The poster is NOT a miniaturized project report.
+
+=============================================================
+CRITICAL RULE 4 — CONCISE CONTENT
+=============================================================
+
+For every section, WRITE THE CONTENT YOURSELF after analysing the report.
+
+Do not ask the student to prepare section-wise content.
+
+Do not reproduce the full report.
+
+Use the following approximate limits:
+
+ABSTRACT:
+50–80 words
+
+INTRODUCTION / PROBLEM:
+3–5 concise bullets
+
+OBJECTIVES:
+3–6 short points
+
+METHODOLOGY:
+Only the essential process stages
+
+SYSTEM ARCHITECTURE:
+Visual diagram + very short labels
+
+TECHNOLOGIES:
+Names only, preferably with icons
+
+DATASET:
+Only important dataset information
+
+IMPLEMENTATION:
+3–5 concise points or workflow stages
+
+RESULTS:
+Most important actual results and visual evidence
+
+DISCUSSION:
+3–5 concise findings
+
+CONCLUSION:
+40–70 words
+
+FUTURE ENHANCEMENTS:
+3–6 concise points
+
+REFERENCES:
+4–8 most relevant references
+
+PROJECT TEAM:
+Names and identifiers exactly as given in the report
+
+If a section is not relevant to the project, intelligently replace it
+with another important section from the report.
+
+=============================================================
+OVERALL VISUAL STYLE
+=============================================================
+
+Create a premium professional engineering / technology academic poster.
+
+Use the uploaded reference poster as inspiration for:
+
+• overall visual language
+• panel-based organization
+• typography hierarchy
+• rounded information boxes
+• technical infographic style
+• academic presentation style
+• blue/navy/cyan visual identity
+• clean engineering aesthetic
+
+Do NOT copy the exact project content from the reference.
+
+The reference is ONLY a design/layout inspiration.
+
+Use:
+
+• white or very light background
+• dark navy blue section headers
+• blue/cyan accent elements
+• subtle light-blue panels
+• thin blue borders
+• rounded rectangular panels
+• clean geometric shapes
+• professional sans-serif fonts
+• consistent iconography
+• clean arrows
+• technical diagrams
+• charts
+• tables
+• screenshots where useful
+
+Avoid:
+
+• cartoon graphics
+• excessive gradients
+• excessive decoration
+• unnecessary 3D effects
+• random stock photographs
+• excessive shadows
+• oversized icons
+• excessive empty space
+• tiny unreadable text
+• long paragraphs
+• overcrowded sections
+
+=============================================================
+A3 LANDSCAPE GRID
+=============================================================
+
+Design the poster as a WIDE THREE-COLUMN LANDSCAPE COMPOSITION.
+
+Use:
+
+┌──────────────────────────────────────────────────────────────┐
+│                    INSTITUTION HEADER                        │
+│                    PROJECT TITLE                             │
+├───────────────────┬────────────────────┬─────────────────────┤
+│                   │                    │                     │
+│     LEFT          │      CENTER        │       RIGHT         │
+│     COLUMN        │      COLUMN        │       COLUMN        │
+│                   │                    │                     │
+├───────────────────┼────────────────────┼─────────────────────┤
+│                   │                    │                     │
+│                   │                    │                     │
+│                   │                    │                     │
+├───────────────────┴────────────────────┼─────────────────────┤
+│                                       │                     │
+│             MAJOR RESULTS             │     DISCUSSION      │
+│                                       │                     │
+├───────────────────────────────────────┼─────────────────────┤
+│             CONCLUSION                │ FUTURE / REFERENCES │
+└───────────────────────────────────────┴─────────────────────┘
+
+The exact panel sizes may be adjusted intelligently according to
+the project's content.
+
+DO NOT force every section to have equal dimensions.
+
+Give more space to:
+• methodology
+• architecture
+• implementation
+• results
+• important visual evidence
+
+Give less space to:
+• references
+• supporting text
+• administrative information
+
+=============================================================
+HEADER
+=============================================================
+
+Create a strong FULL-WIDTH HORIZONTAL HEADER.
+
+Extract the actual institutional information from the report.
+
+Include, where available:
+
+INSTITUTION NAME
+
+DEPARTMENT / PROGRAM
+
+PBL COURSE / ACADEMIC YEAR
+
+Then display:
+
+PROJECT TITLE
+
+The project title must be highly prominent.
+
+Use the exact project title from the report or a faithful concise
+version if the original title is excessively long.
+
+If an official institutional logo is present in the uploaded material,
+use it appropriately.
+
+Do not invent logos.
+
+Place relevant project-related visual elements near the header only
+if they genuinely help communicate the project.
+
+=============================================================
+SECTION 1 — ABSTRACT
+=============================================================
+
+Read the complete report and understand the project's overall purpose.
+
+Write a concise poster-friendly abstract.
+
+Do NOT copy the report abstract word-for-word.
+
+Summarize:
+
+• problem
+• proposed solution
+• core technology/method
+• major outcome
+
+Keep it approximately 50–80 words.
+
+=============================================================
+SECTION 2 — INTRODUCTION / PROBLEM STATEMENT
+=============================================================
+
+Understand the project's motivation from the entire report.
+
+Write 3–5 concise bullets explaining:
+
+• What problem exists?
+• Who/what is affected?
+• Why does the problem matter?
+• What limitation exists in existing approaches?
+• What does this project attempt to solve?
+
+Do not include unnecessary theoretical background.
+
+=============================================================
+SECTION 3 — OBJECTIVES
+=============================================================
+
+Identify the actual objectives from the report.
+
+Rewrite them into short, clear action-oriented statements.
+
+Prefer:
+
+01  Objective
+02  Objective
+03  Objective
+04  Objective
+05  Objective
+
+Use simple technical icons.
+
+Do not invent objectives.
+
+=============================================================
+SECTION 4 — METHODOLOGY
+=============================================================
+
+Understand the actual methodology used in the project.
+
+Convert it into a VISUAL WORKFLOW rather than a paragraph.
+
+Use the project's actual stages.
+
+For example, if applicable:
+
+INPUT
+↓
+DATA COLLECTION
+↓
+PREPROCESSING
+↓
+FEATURE / MODEL DEVELOPMENT
+↓
+TRAINING / IMPLEMENTATION
+↓
+TESTING
+↓
+OUTPUT
+
+But NEVER automatically use these stages unless supported by the report.
+
+Replace them with the actual project workflow.
+
+Use:
+
+• process boxes
+• arrows
+• technical icons
+• short labels
+• numbered stages
+
+Each stage should contain only a few words.
+
+=============================================================
+SECTION 5 — SYSTEM ARCHITECTURE
+=============================================================
+
+Study the complete report and identify the actual system architecture.
+
+Create a clean professional technical block diagram.
+
+Show the logical relationship between:
+
+INPUT
+→ PROCESSING
+→ CORE SYSTEM
+→ OUTPUT
+
+or the actual architecture described by the project.
+
+Include only real components from the report.
+
+Clearly label:
+
+• hardware
+• software
+• models
+• databases
+• APIs
+• sensors
+• users
+• processing modules
+• output modules
+
+where applicable.
+
+Do NOT invent architecture components.
+
+The architecture should be one of the major visual elements
+of the poster.
+
+=============================================================
+SECTION 6 — TECHNOLOGIES / TOOLS
+=============================================================
+
+Extract the technologies actually used.
+
+Include relevant:
+
+• programming languages
+• frameworks
+• libraries
+• databases
+• cloud platforms
+• development tools
+• hardware
+• sensors
+• APIs
+• AI/ML models
+• simulation tools
+
+Display them as compact icon-based cards.
+
+Do not include technologies merely because they are related to the topic.
+
+ONLY include technologies actually used or explicitly discussed
+as part of the project.
+
+=============================================================
+SECTION 7 — DATASET / INPUT DATA
+=============================================================
+
+If the project uses a dataset, extract the actual information.
+
+Include only important details such as:
+
+• Dataset name
+• Source
+• Number of samples
+• Classes
+• Input type
+• Train/test split
+• Data collection
+• Preprocessing
+
+Use exact numerical values from the report.
+
+If the project does not use a dataset, intelligently replace this
+panel with the actual project input/data source.
+
+=============================================================
+SECTION 8 — IMPLEMENTATION
+=============================================================
+
+Understand how the proposed system was actually implemented.
+
+Summarize the implementation into approximately 3–5 concise points.
+
+Highlight:
+
+• major modules
+• important algorithms
+• development process
+• hardware/software integration
+• deployment approach
+
+Use diagrams or screenshots when they add real value.
+
+Avoid lengthy implementation descriptions.
+
+=============================================================
+SECTION 9 — RESULTS / PERFORMANCE
+=============================================================
+
+THIS IS A HIGH-PRIORITY SECTION.
+
+Carefully examine the entire report for actual experimental results.
+
+Extract only verified values such as:
+
+• Accuracy
+• Precision
+• Recall
+• F1-score
+• mAP
+• RMSE
+• MAE
+• latency
+• response time
+• throughput
+• efficiency
+• resource usage
+• comparison values
+• experimental observations
+
+Use the exact values found in the report.
+
+Do NOT calculate missing values.
+
+Do NOT estimate values.
+
+Do NOT fabricate results.
+
+Represent results visually wherever possible.
+
+Use:
+
+• bar charts
+• line graphs
+• comparison charts
+• tables
+• confusion matrices
+• before/after comparisons
+• screenshots
+• output images
+• performance indicators
+
+Choose only visualizations that are genuinely supported
+by the report.
+
+=============================================================
+SECTION 10 — KEY FINDINGS / DISCUSSION
+=============================================================
+
+Analyse the actual results and observations.
+
+Write 3–5 concise points describing:
+
+• major findings
+• observed performance
+• important advantages
+• limitations
+• practical observations
+
+Do not simply repeat the Results section.
+
+The Discussion should explain what the results mean.
+
+=============================================================
+SECTION 11 — CONCLUSION
+=============================================================
+
+Write a concise conclusion based on the COMPLETE report.
+
+Approximately 40–70 words.
+
+Answer:
+
+• What was developed?
+• What problem did it address?
+• What was achieved?
+
+Do not exaggerate the project's contribution.
+
+Do not introduce unsupported claims.
+
+=============================================================
+SECTION 12 — FUTURE ENHANCEMENTS
+=============================================================
+
+Identify actual future work mentioned or clearly established
+in the report.
+
+Write 3–6 short points.
+
+Focus on:
+
+• scalability
+• additional features
+• improved performance
+• deployment
+• integration
+• future research
+• real-world expansion
+
+ONLY use future directions supported by the report.
+
+=============================================================
+SECTION 13 — REFERENCES
+=============================================================
+
+Select the most relevant references from the complete report.
+
+Prefer approximately 4–8 key references depending on available space.
+
+Use compact academic formatting.
+
+Preserve:
+
+• authors
+• title
+• publication
+• year
+• DOI/URL
+
+Do not fabricate references.
+
+Do not create references that are not in the report.
+
+=============================================================
+SECTION 14 — PROJECT TEAM
+=============================================================
+
+Extract the project team information exactly from the report.
+
+Display:
+
+PROJECT TEAM
+
+1. Student Name — Roll/Reg. No.
+2. Student Name — Roll/Reg. No.
+3. Student Name — Roll/Reg. No.
+4. Student Name — Roll/Reg. No.
+
+FACULTY GUIDE:
+Name
+
+If more students are present, accommodate them cleanly.
+
+Do not invent names or registration numbers.
+
+=============================================================
+VISUAL CONTENT SELECTION
+=============================================================
+
+The uploaded report may contain useful:
+
+• figures
+• diagrams
+• screenshots
+• charts
+• tables
+• photographs
+• system architecture
+• workflow diagrams
+• output examples
+
+Identify the most useful visuals.
+
+Prioritize visuals that demonstrate:
+
+1. How the system works
+2. What was implemented
+3. What the system produces
+4. What results were obtained
+
+Do not fill the poster with decorative images.
+
+Every visual should communicate information.
+
+=============================================================
+TEXT-TO-VISUAL CONVERSION
+=============================================================
+
+Whenever possible:
+
+LONG TEXT
+↓
+SHORT STATEMENT
+
+METHODOLOGY PARAGRAPH
+↓
+WORKFLOW DIAGRAM
+
+ARCHITECTURE DESCRIPTION
+↓
+BLOCK DIAGRAM
+
+PERFORMANCE TABLE
+↓
+COMPARISON CHART
+
+RESULTS PARAGRAPH
+↓
+KEY METRIC + GRAPH
+
+TECHNOLOGY LIST
+↓
+ICON CARDS
+
+OBJECTIVES PARAGRAPH
+↓
+NUMBERED OBJECTIVES
+
+The final poster should be approximately:
+
+30–40% text
+60–70% visual information
+
+=============================================================
+TYPOGRAPHY
+=============================================================
+
+Use highly readable professional sans-serif typography.
+
+Hierarchy:
+
+INSTITUTION:
+Medium / bold
+
+PROJECT TITLE:
+Very large / bold
+
+SECTION HEADINGS:
+Large / bold / white text on dark navy header
+
+SUBHEADINGS:
+Medium / bold
+
+BODY:
+Readable regular text
+
+KEY METRICS:
+Large / bold
+
+Do not make body text so small that it becomes unreadable
+when printed on an A3 sheet.
+
+=============================================================
+COLOUR SYSTEM
+=============================================================
+
+Use a consistent academic colour palette.
+
+Primary:
+Dark Navy Blue
+
+Secondary:
+Medium Blue / Cyan
+
+Background:
+White / Very Light Blue
+
+Accent:
+Use limited complementary academic accents where necessary.
+
+Do not use many unrelated colours.
+
+Maintain strong contrast between text and background.
+
+=============================================================
+PANEL DESIGN
+=============================================================
+
+Use:
+
+• rounded rectangular panels
+• thin borders
+• dark navy section-title bars
+• consistent corner radius
+• subtle shadows only where appropriate
+• consistent padding
+• aligned content
+• consistent spacing
+
+All panels should visually belong to the same design system.
+
+=============================================================
+INFORMATION HIERARCHY
+=============================================================
+
+The viewer should understand the project in this order:
+
+PROJECT TITLE
+↓
+PROBLEM
+↓
+OBJECTIVES
+↓
+METHODOLOGY
+↓
+SYSTEM ARCHITECTURE
+↓
+IMPLEMENTATION
+↓
+RESULTS
+↓
+FINDINGS
+↓
+CONCLUSION
+↓
+FUTURE WORK
+
+Make RESULTS and SYSTEM ARCHITECTURE visually prominent.
+
+=============================================================
+CONTENT COMPRESSION RULE
+=============================================================
+
+If the report contains too much information:
+
+DO NOT reduce the font size excessively.
+
+Instead:
+
+• remove repetition
+• remove generic theory
+• remove unnecessary explanations
+• combine related points
+• summarize long paragraphs
+• retain important technical information
+• retain important numerical results
+• retain important diagrams
+• retain important findings
+
+The poster must remain readable.
+
+=============================================================
+ACADEMIC ACCURACY CHECK
+=============================================================
+
+Before generating the final poster, internally verify:
+
+✓ Project title
+✓ Institution
+✓ Department
+✓ Course / academic year
+✓ Problem statement
+✓ Objectives
+✓ Methodology
+✓ Architecture
+✓ Technologies
+✓ Dataset
+✓ Implementation
+✓ Results
+✓ Numerical values
+✓ Discussion
+✓ Conclusion
+✓ Future work
+✓ References
+✓ Student names
+✓ Faculty guide
+
+All must be consistent with the uploaded report.
+
+=============================================================
+IMPORTANT — DO NOT HALLUCINATE
+=============================================================
+
+If the report does NOT contain:
+
+• accuracy → do not create accuracy
+• dataset → do not create dataset
+• performance numbers → do not create numbers
+• architecture → do not invent architecture
+• hardware → do not add hardware
+• references → do not fabricate references
+• future work → do not invent future work
+
+Use only evidence from the uploaded report.
+
+=============================================================
+FINAL A3 LANDSCAPE COMPOSITION
+=============================================================
+
+The final image MUST be:
+
+A3 LANDSCAPE
+420 × 297 mm
+4961 × 3508 pixels
+300 DPI
+ONE PAGE
+HORIZONTAL
+
+The poster must clearly look WIDE.
+
+The header must run horizontally across the full width.
+
+The main content must use THREE SIDE-BY-SIDE COLUMNS.
+
+Do NOT stack the content into a portrait layout.
+
+Do NOT produce a tall infographic.
+
+Do NOT produce a square poster.
+
+Do NOT produce a vertical poster.
+
+=============================================================
+FINAL QUALITY STANDARD
+=============================================================
+
+The final result should look like a professionally designed:
+
+ENGINEERING COLLEGE
+PBL / CAPSTONE / PROJECT EXHIBITION POSTER
+
+Suitable for:
+
+• PBL Evaluation
+• Project Exhibition
+• Department Review
+• Technical Symposium
+• Project Expo
+• Academic Presentation
+
+The poster should communicate the project quickly,
+professionally and visually.
+
+It must NOT look like a report pasted onto a poster.
+
+It should look like a carefully designed academic infographic
+created by a professional research communication designer.
+
+=============================================================
+FINAL INSTRUCTION
+=============================================================
+
+FIRST:
+Analyse the COMPLETE uploaded Project Report.
+
+SECOND:
+Identify the most important technical information,
+results, diagrams, findings and evidence.
+
+THIRD:
+WRITE concise poster-ready content YOURSELF for every relevant section.
+
+FOURTH:
+Organize that content into the A3 LANDSCAPE three-column layout.
+
+FIFTH:
+Create the final professional A3 LANDSCAPE poster.
+
+Do NOT ask me to provide section-wise content.
+
+Do NOT simply copy the report.
+
+Understand → Summarize → Visualize → Design.
+
+MOST IMPORTANT:
+
+A3 LANDSCAPE.
+420 × 297 mm.
+4961 × 3508 pixels.
+WIDE HORIZONTAL POSTER.
+ONE SINGLE PAGE.

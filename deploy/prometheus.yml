@@ -1,0 +1,27 @@
+# Prometheus scrape configuration for the RiskRadar stack.
+#
+# The 15s interval is chosen to match the histogram granularity that actually
+# matters here: prediction latency is measured in tens of milliseconds, so
+# anything coarser hides the p95 spikes that indicate a cold cache or a slow
+# SHAP path.
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    service: riskradar
+
+rule_files:
+  - /etc/prometheus/rules.yml
+
+scrape_configs:
+  - job_name: riskradar
+    metrics_path: /api/v2/metrics
+    static_configs:
+      - targets: ["riskradar:8000"]
+        labels:
+          environment: docker
+
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]

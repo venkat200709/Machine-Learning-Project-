@@ -1,0 +1,14 @@
+# Auto-provision Prometheus so Grafana is useful on first login rather than
+# presenting an empty "add your first data source" screen.
+
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: true
+    jsonData:
+      timeInterval: 15s

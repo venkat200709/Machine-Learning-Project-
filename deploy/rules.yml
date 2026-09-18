@@ -1,0 +1,84 @@
+# Alerting rules for RiskRadar.
+#
+# These encode the failure modes that matter for *this* service, which are not
+# the usual web-service ones. A model can be serving every request in 20ms with
+# a perfect uptime record while quietly having become wrong — so the rules below
+# watch model behaviour, not just infrastructure.
+
+groups:
+  - name: riskradar-availability
+    rules:
+      - alert: RiskRadarModelNotLoaded
+        expr: riskradar_model_ready == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "No model is loaded — the service cannot score requests"
+          runbook: "Check the artefact loaded at boot; a library-version mismatch
+                    forces a local retrain. Run: python run.py --train"
+
+      - alert: RiskRadarHighErrorRate
+        expr: |
+          sum(rate(riskradar_errors_total{kind="server"}[5m]))
+            / clamp_min(sum(rate(riskradar_http_requests_total[5m])), 0.001) > 0.05
+        for: 5m
+        labels:
+          severity: high
+        annotations:
+          summary: "Over 5% of requests are returning 5xx"
+
+      - alert: RiskRadarLatencyRegression
+        expr: |
+          histogram_quantile(0.95,
+            sum(rate(riskradar_prediction_duration_ms_bucket[5m])) by (le)) > 500
+        for: 10m
+        labels:
+          severity: medium
+        annotations:
+          summary: "p95 inference latency above 500ms"
+          runbook: "Usually a cold cache after a deploy, or the SHAP explainer
+                    being rebuilt. Check riskradar_cache_hit_rate first."
+
+  - name: riskradar-model-health
+    rules:
+      # The one most services miss: the model is up, fast, and wrong.
+      - alert: RiskRadarInputDrift
+        expr: riskradar_drift_psi_max > 0.25
+        for: 15m
+        labels:
+          severity: high
+        annotations:
+          summary: "Significant input drift (PSI > 0.25)"
+          runbook: "Live traffic no longer resembles the training distribution.
+                    The advertised accuracy is no longer a fair description of
+                    the model. Investigate the ingestion pipeline, then retrain."
+
+      - alert: RiskRadarAbstentionSpike
+        expr: |
+          sum(rate(riskradar_conformal_abstentions_total[10m]))
+            / clamp_min(sum(rate(riskradar_predictions_total[10m])), 0.001) > 0.35
+        for: 10m
+        labels:
+          severity: medium
+        annotations:
+          summary: "Over 35% of predictions are conformally ambiguous"
+          runbook: "The model is increasingly unable to commit to a single band.
+                    Often the earliest signal of drift, before PSI moves."
+
+      - alert: RiskRadarShadowDivergence
+        expr: increase(riskradar_shadow_disagreements_total{severity="severe"}[1h]) > 0
+        labels:
+          severity: high
+        annotations:
+          summary: "Challenger and champion disagree across two risk bands"
+          runbook: "One of the two models is calling a dangerous area safe.
+                    Do not promote until this is understood."
+
+      - alert: RiskRadarAccuracyClaimStale
+        expr: riskradar_model_accuracy < 0.95
+        for: 1h
+        labels:
+          severity: medium
+        annotations:
+          summary: "The serving model's recorded accuracy is below the 95% floor"

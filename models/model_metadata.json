@@ -1,0 +1,297 @@
+{
+  "model_name": "LightGBM (tuned)",
+  "model_slug": "lgbm",
+  "ensemble_members": null,
+  "version": "2.0.0",
+  "trained_at": "2026-08-10T11:41:57+00:00",
+  "python_version": "3.13.14",
+  "n_raw_features": 29,
+  "n_engineered_features": 79,
+  "feature_names": [
+    "Latitude",
+    "Longitude",
+    "Crime_Count",
+    "Violent_Crime",
+    "Theft_Count",
+    "Assault_Count",
+    "Harassment_Count",
+    "Hour",
+    "Month",
+    "Weekend",
+    "Streetlight_Count",
+    "Working_Streetlights",
+    "Broken_Streetlights",
+    "Population_Density",
+    "Footfall",
+    "Bus_Stop_Count",
+    "Metro_Distance_km",
+    "Police_Distance_km",
+    "Hospital_Distance_km",
+    "School_Count",
+    "Commercial_Area",
+    "Residential_Area",
+    "CCTV_Count",
+    "Emergency_Calls",
+    "Day_Index",
+    "Weather_Severity",
+    "Visibility_Score",
+    "Previous_Risk_Ord",
+    "Crime_Trend_Ord",
+    "Hour_Sin",
+    "Hour_Cos",
+    "Month_Sin",
+    "Month_Cos",
+    "Is_Night",
+    "Is_Late_Night",
+    "Is_Rush_Hour",
+    "Hours_From_Midday",
+    "Night_Weekend",
+    "Violent_Ratio",
+    "Theft_Ratio",
+    "Assault_Ratio",
+    "Harassment_Ratio",
+    "Gendered_Crime_Load",
+    "Gendered_Crime_Ratio",
+    "Crime_Severity_Index",
+    "Reported_Crime_Sum",
+    "Unclassified_Crime",
+    "Log_Crime_Count",
+    "Crime_Per_1k_Population",
+    "Crime_Per_1k_Footfall",
+    "Severity_Per_1k_Population",
+    "Emergency_Calls_Per_1k_Pop",
+    "Calls_Per_Crime",
+    "Guardianship_Index",
+    "Lighting_Health",
+    "Broken_Light_Ratio",
+    "Effective_Lighting",
+    "Darkness_Exposure",
+    "CCTV_Per_1k_Population",
+    "CCTV_Per_Crime",
+    "Surveillance_Index",
+    "Surveillance_Deficit",
+    "Police_Proximity",
+    "Hospital_Proximity",
+    "Metro_Proximity",
+    "Nearest_Help_km",
+    "Total_Help_Distance",
+    "Emergency_Access_Score",
+    "Unpoliced_Crime_Load",
+    "Transit_Access_Score",
+    "Isolation_Index",
+    "Land_Use_Mix",
+    "Amenity_Density",
+    "Infrastructure_Score",
+    "Threat_Score",
+    "Net_Safety_Score",
+    "Risk_Momentum",
+    "Night_Threat",
+    "Weather_Adjusted_Visibility"
+  ],
+  "classes": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "train_rows": 80000,
+  "test_rows": 20000,
+  "metrics": {
+    "accuracy": 0.9827,
+    "balanced_accuracy": 0.9770205116091749,
+    "precision_macro": 0.9765027328667609,
+    "recall_macro": 0.9770205116091749,
+    "f1_macro": 0.9767575372314127,
+    "f1_weighted": 0.9827171207377272,
+    "cohen_kappa": 0.9701814110382091,
+    "mcc": 0.970183357494783,
+    "roc_auc_ovr": 0.9992823628221013,
+    "log_loss": 0.04036208093467441,
+    "expected_calibration_error": 0.0012749424502017037,
+    "per_class": {
+      "Low": {
+        "precision": 0.9836,
+        "recall": 0.98,
+        "f1": 0.9818,
+        "support": 4595
+      },
+      "Medium": {
+        "precision": 0.9534,
+        "recall": 0.9592,
+        "f1": 0.9563,
+        "support": 3946
+      },
+      "High": {
+        "precision": 0.9925,
+        "recall": 0.9919,
+        "f1": 0.9922,
+        "support": 11459
+      }
+    },
+    "confusion_matrix": [
+      [
+        4503,
+        92,
+        0
+      ],
+      [
+        75,
+        3785,
+        86
+      ],
+      [
+        0,
+        93,
+        11366
+      ]
+    ]
+  },
+  "cv_accuracy_mean": 0.98001,
+  "cv_accuracy_std": 0.00079,
+  "cv_source": "winning model",
+  "cv_scores": [
+    0.9811002362470469,
+    0.9796752540593242,
+    0.9792619815495387
+  ],
+  "data_quality": {
+    "rows": 100000,
+    "columns": 31,
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "constant_columns": [],
+    "class_distribution": {
+      "High": 57296,
+      "Low": 22974,
+      "Medium": 19730
+    },
+    "imbalance_ratio": 2.904,
+    "numeric_columns": 25,
+    "categorical_columns": 6
+  },
+  "feature_importance": [
+    {
+      "feature": "CCTV_Per_Crime",
+      "importance": 0.070759
+    },
+    {
+      "feature": "Crime_Count",
+      "importance": 0.068142
+    },
+    {
+      "feature": "Unpoliced_Crime_Load",
+      "importance": 0.059321
+    },
+    {
+      "feature": "Broken_Streetlights",
+      "importance": 0.052537
+    },
+    {
+      "feature": "Crime_Per_1k_Footfall",
+      "importance": 0.051883
+    },
+    {
+      "feature": "Broken_Light_Ratio",
+      "importance": 0.028383
+    },
+    {
+      "feature": "Police_Distance_km",
+      "importance": 0.0275
+    },
+    {
+      "feature": "Surveillance_Deficit",
+      "importance": 0.026463
+    },
+    {
+      "feature": "Theft_Ratio",
+      "importance": 0.02584
+    },
+    {
+      "feature": "Hour_Cos",
+      "importance": 0.025185
+    },
+    {
+      "feature": "Police_Proximity",
+      "importance": 0.025031
+    },
+    {
+      "feature": "Lighting_Health",
+      "importance": 0.022389
+    },
+    {
+      "feature": "Night_Threat",
+      "importance": 0.020944
+    },
+    {
+      "feature": "Crime_Severity_Index",
+      "importance": 0.018105
+    },
+    {
+      "feature": "Infrastructure_Score",
+      "importance": 0.016988
+    },
+    {
+      "feature": "Gendered_Crime_Load",
+      "importance": 0.016926
+    },
+    {
+      "feature": "Footfall",
+      "importance": 0.016475
+    },
+    {
+      "feature": "Unclassified_Crime",
+      "importance": 0.015469
+    },
+    {
+      "feature": "CCTV_Count",
+      "importance": 0.014383
+    },
+    {
+      "feature": "Longitude",
+      "importance": 0.013691
+    },
+    {
+      "feature": "Darkness_Exposure",
+      "importance": 0.013537
+    },
+    {
+      "feature": "Latitude",
+      "importance": 0.013222
+    },
+    {
+      "feature": "Weather_Severity",
+      "importance": 0.013185
+    },
+    {
+      "feature": "Surveillance_Index",
+      "importance": 0.012432
+    },
+    {
+      "feature": "Streetlight_Count",
+      "importance": 0.01221
+    },
+    {
+      "feature": "Guardianship_Index",
+      "importance": 0.011926
+    },
+    {
+      "feature": "Working_Streetlights",
+      "importance": 0.011778
+    },
+    {
+      "feature": "Log_Crime_Count",
+      "importance": 0.010815
+    },
+    {
+      "feature": "Calls_Per_Crime",
+      "importance": 0.01079
+    },
+    {
+      "feature": "Crime_Per_1k_Population",
+      "importance": 0.010747
+    }
+  ],
+  "baseline_reference": {
+    "previous_project_model": "Gradient Boosting (raw LabelEncoder features)",
+    "previous_project_accuracy": 0.9483
+  }
+}
